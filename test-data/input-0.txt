@@ -18,6 +18,13 @@ TORPEDO,SINGLE # fire once the 100 percent failure rate torpedo
 # Create a ship with 1 torpedo in each
 GT4500,1,0,1,0
 TORPEDO,ALL # fire both
-# Create a ship with 1 store which has 1 torpedo and the other is empty
+# Create a ship and the first store has a torpedo and the second is empty
 GT4500,1,0,0,0
 TORPEDO,ALL # fire both
+# Create a ship and the first is empty and the second has a rocket
+GT4500,0,0,1,0
+TORPEDO,ALL # fire both
+# Create a ship and the first has two and the second has one
+GT4500,2,0,0,0
+TORPEDO,SINGLE # fire once 
+TORPEDO,SINGLE # fire once 
