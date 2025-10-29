@@ -1,3 +1,30 @@
 # Create a ship with stocked torpedo stores that never fail
 GT4500,10,0,10,0
 TORPEDO,SINGLE  # should have fired from the primary store
+# Create a ship with no torpedos
+GT4500,0,0,0,0
+TORPEDO,SINGLE # should have fired once
+# Create a ship with 1-1 torpedo in the stores
+GT4500,1,0,1,0
+TORPEDO,SINGLE # should have fired twice
+TORPEDO,SINGLE # should have fired once
+TORPEDO,SINGLE # should have fired three times
+# Create a ship with 1 torpedo in the second store
+GT4500,0,0,1,0
+TORPEDO,SINGLE # should have fired once and it fired from the second
+# Create a ship with 1 torpedo store which has 100 percent failiure rate and one store with 1 torpedo with 0 percent failure rate
+GT4500,1,1,1,0
+TORPEDO,SINGLE # fire once the 100 percent failure rate torpedo
+# Create a ship with 1 torpedo in each
+GT4500,1,0,1,0
+TORPEDO,ALL # fire both
+# Create a ship and the first store has a torpedo and the second is empty
+GT4500,1,0,0,0
+TORPEDO,ALL # fire both
+# Create a ship and the first is empty and the second has a rocket
+GT4500,0,0,1,0
+TORPEDO,ALL # fire both
+# Create a ship and the first has two and the second has one
+GT4500,2,0,0,0
+TORPEDO,SINGLE # fire once 
+TORPEDO,SINGLE # fire once 
